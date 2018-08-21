@@ -2,6 +2,7 @@
 Version Control is a system that records changes to a file or set of files over time so that you can recall specific versions later.
 
 # Why use Version Control?
+
 * **Storing and restoring previous versions **: You can jump to any moment in time. short-term undo and long-term undo.
 * **Understanding what happened**: It helps you understand how your project evolved between versions.
 * **Collaboration**: Lets people share files and stay up-to-date with latest versions.
