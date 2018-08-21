@@ -1,0 +1,81 @@
+---
+title: "COMS3002: Software Engineering Lab 1"
+author: "Lucky Mahlangu, Mpinane Mohale, Thulisile Shipyana, Sbusiso Mkhombe "
+date: "20 August 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Project Description:
+Problem: It is becoming more and more difficult, particularly for students entering graduate schools, to make decisions on courses that subsequently impact on their successful completion of graduate studies. Often, students have to choose from a number of electives in their specific programmes.
+
+The main purpose of this project is to develop a system which will recommend elective courses to prospective postgraduate students and further predict the grades the students are likely to get in the recommended courses.
+
+The students will be required to enter their previous courses and the grades they got in the different courses. This input will be used as input to a machine learning algorithm and the outcome would be the student’s recommended courses,
+
+These courses along with the student’s previous grades will be used as input into another machine learning algorithm whose outcome will be the predicted marks.
+
+These machine learning algorithms will be fed training, validation and testing data of past post graduate students(their previous courses and the marks obtained in those courses as well as their grades in their postgraduate studies). To further improve recommendations, the system will ask the current post graduate students to enter their current grades as the year progresses.
+
+* We will be using the Django Framework
+* Database: MySQL - Wits LAMP
+* Front-end: HTML,CSS,JS
+* Back-end: Python
+
+# Front-end tasks:
+Create prototype/wireframe (1)
+
+Find libraries/frameworks to use for UI Design (2.1)
+
+Implement UI (2.2)
+
+# Back-end tasks:
+Basic Functionality:
+
+* Database setup(creating tables) (3)
+*  Register & login (4)
+*  Data input(add, edit, delete) (5)
+    + Courses completed and their marks
+    + Current courses and their marks(Survey)
+    
+\newpage 
+
+Machine Learning:
+
+* Recommend a course (6)
+* Predict grades (7)
+
+
+# Members’ Responsibilities:
+
+Mpinane Mohale - (1) (2.1) (2.2) (7)
+
+Lucky Mahlangu - (3) (6) 
+
+Thulisile Shipyana - (2.1)(2.2)(3)(4)
+
+Sbusiso Mkhombe - (4)(5)
+
+# Input & Output:
+* Courses completed and their marks
+    + Recommended courses for honours or masters based on user selection
+* Current courses and their marks
+    + Increase training dataset
+    
+# Meeting Times:
+
+Monday: 14:00 - 17:00
+
+Wednesday: Whatsapp check in
+
+Friday: 19:00 - 21:00
+
+# Github Repository
+[https://github.com/Mpinane/SoftwareEngineeringProject_Group3.git](https://github.com/Mpinane/SoftwareEngineeringProject_Group3.git)
+
+
+
+
