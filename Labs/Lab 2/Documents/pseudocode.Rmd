@@ -1,0 +1,37 @@
+---
+title: "PrimeNumbers Pseudocode"
+author: "Lucky Mahlangu, Mpinane Mohale, Thulisile Shipyana, Sbusiso Mkhombe "
+date: "22 August 2018"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# PrimeNumbers
+
+|**Algorithm: PrimeNumbers(X)**                                                                                                 |
+|------------------------------------------------------------------------------------------------------------------------------ |-----
+|*Input:X, where X is a positive long integer.*                                                                                 |
+|                                                                                                                               |
+|*Output:Primes[],N, where Primes is an array of prime numbers less than X, and N is the length of Primes.*                     |                                 |                                                                                                                               |
+|                                                                                                                              
+|01 ~*Primes $\leftarrow$[]*
+|02 ~*counter $\leftarrow$ 2*
+|03 ~*While counter<=X*
+|04 ~~~~*isPrime $\leftarrow$ True*
+|05 ~~~~*For i from 2 to X*
+|06 ~~~~~~~*If mod(counter,i)==0 and (counter not equal to i)*
+|07 ~~~~~~~~~~*isPrime $\leftarrow$ False*
+|09 ~~~~~~~~~~*break*
+|10 ~~~~*If isPrime*
+|11 ~~~~~~~*add counter into Primes*
+|12 ~~~~*counter $\leftarrow$ counter+1*
+|13 ~*N $\leftarrow$ size of Primes*
+|14 ~*Return Primes and N*
+
+
+
+
+
