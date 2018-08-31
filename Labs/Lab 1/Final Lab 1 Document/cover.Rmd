@@ -1,0 +1,41 @@
+---
+title: "COMS3002: Software Engineering III"
+subtitle: "~PRELIMINARY SOFTWARE REQUIREMENTS SPECIFICATION~"
+date: "August 30, 2018"
+output: pdf_document
+---
+
+----------------------------------------------------------------------------------------------------------
+
+                                          Prepared for
+                                      Prof. E. J. Otoo
+                                University of the witwatersrand  
+                                
+                                
+                                          Prepared by
+                                    Lucky Mahlangu(1395125)
+                                    Mpinane Mohale(1363679)
+                                    Sbusiso Mkhombe(1154046)
+                                   Thulisile Shipyana(916781)
+                                  
+                                        
+
+```{r fig.width=15, fig.height=40,echo=FALSE}
+library(png)
+library(grid)
+img <- readPNG("wits1.png")
+ grid.raster(img)
+```
+---------------------------------------------------------------------------------------------------------
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+\newpage
+
+
+
+
+
+
+
