@@ -30,7 +30,80 @@ img <- readPNG("wits1.png")
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
+
 ```
+
+\newpage
+
+# Table of Contents
+
+\section {1 Introduction}
+
+1.1 Problem Statement...................................................................................(4)
+
+1.2 Purpose.............................................................................................(4)
+
+1.3 Scope...............................................................................................(4)
+
+1.4 Definitions, Acronyms and Abbreviations..............................................................(5)
+
+1.5 Tools to be considered...............................................................................(5)
+
+1.6 References...........................................................................................(5)
+
+1.7 Overview............................................................................................(6)
+
+\section {2 Overall Description}
+
+2.1 Product Perspective..................................................................................(6)
+
+2.2 User Interface.......................................................................................(7)
+
+2.3 software Interfaces..................................................................................(10)
+
+2.4 Hardware Interfaces..................................................................................(10)
+
+2.5 Communication Interfaces............................................................................(10)
+
+2.6 Memory Constraints.................................................................................(10)
+
+2.7 User Characteristics.................................................................................(11)
+
+2.8 Constraints.........................................................................................(11)
+
+2.9 Assumptions and Dependencies.......................................................................(11)
+
+2.10 ER Diagram.......................................................................................(11)
+
+2.11 Use Case Model....................................................................................(12)
+
+\section {3 Specific Requirements}
+
+3.1 Functional requirements..............................................................................(13)
+
+3.2 Inputs and Outputs...................................................................................(14)
+
+3.3 Functions............................................................................................(14)
+
+3.4 Performance Requirements...........................................................................(14)
+
+3.5 Logical Database Requirements.......................................................................(15)
+
+3.6 System Software Requirements.......................................................................(15)
+
+3.7 Design Constraints...................................................................................(15)
+
+3.8 Other Requirements..................................................................................(15)
+
+\section {4 Gathering and Preparing Data}
+
+4.1 Data Collection and Preparation......................................................................(16)
+
+4.2 Data Analysis and Model Selection....................................................................(16)
+
+\section{5 The Dataset}
+
+5.1 Variable Dictionary..................................................................................(17)
 \newpage
 
 
@@ -48,7 +121,7 @@ Avi is a web application that will recommend elective courses to prospective pos
 
 A student will start by creating an account which includes specifying their firstname, lastname, student number and their login password.
 
-Once a student has created an account they can only be able to get recommendations once they have added the courses they have done, the year the course was completed along with the grade they obtained in each course. This information can be updated by the student for cases where they may have made a mistake or their mark has changed.
+Once a student has created an account they can only be able to get recommendations once they have added the courses they have done, the grade they obtained in each course. This information can be updated by the student for cases where they may have made a mistake or their mark has changed.
 
 The student can now request to get recommendations. After requesting to get a recommendation, the student must specify the level of study they want recommendations for. After this the system will present to them the recommended courses along with the predicted grade for each course.
 
@@ -97,7 +170,7 @@ The student can now request to get recommendations. After requesting to get a re
 
 * They use their own gut feeling to choose elective courses. On the other hand the faculty as well as their parents do not have the required domain knowledge to help them choose the right elective courses. 
 
-*Existing System:*
+*Drawbacks:*
 
 * Bad choice of elective courses can have a direct impact on that student's academic performance.
 
@@ -114,11 +187,13 @@ The student can now request to get recommendations. After requesting to get a re
 * Get/view recommendation - a student.
 * A registered user should also be able to reset password.
 
+
 \section{2 Overall Description}
 
 \subsection{2.1 Product Perspective}
 
 The Avi system is the first of its kind at the University of Witwatersrand. It is independent and totally self contained. Currently recommendations are provided by the faculty based on their observations of other students’ performance there is no formal or reliable system or methods for providing these recommendations.
+
 \newpage
 
 \subsection{2.2 User Interface}
@@ -192,7 +267,7 @@ The user needs a device that has internet connection and one of the browsers men
 *Server Side:*
 
 Since this system will not be deployed, the hardware requirements are a laptop or desktop with a intel Core i7 CPU or better.
-For the database, the University of Witwatersrand’s LAMP server will be sufficient
+For the database, the University of Witwatersrand’s LAMP server will be sufficient.
 
 \subsection{2.5 Communication Interfaces}
 
@@ -231,6 +306,7 @@ The software will impose minimal constraints on its own. Any constraint will be 
 *Crows Foot ERD:*
 
 ![](crows_foot_ERD.png){width=450px}
+\newpage
 
 \subsection{2.11 Use Case Model}
 
@@ -244,6 +320,7 @@ The software will impose minimal constraints on its own. Any constraint will be 
 \subsection{3.1 Functional requirements}
 
 *Students class:*
+
 * Registration - unregistered users of the system will be able to register so that they can access to the system.
 
 * Login - after successful registration users a required to login using their created username and password.
@@ -279,6 +356,8 @@ Reset password             | A student will be able to reset his/her password if
 Get recommendation         | Based on the marks entered the students can get a recommendation of courses to take from the system
 -------------------------- | ---------------------------------------------------------------
 View recommendations       | The student will be able to see previously made recommendations
+
+\newpage
 
 \subsection{3.2 Inputs and Outputs}
 
@@ -328,7 +407,7 @@ The undergraduate results should be integers ranging from 0 – 100 and will be 
 * Integers.
 * Converted Strings.
 * Protected Strings.
-* Floats
+* Floats.
 
 Variables will be checked for validity and range correspondence. 
 Variables such as integers will have a higher frequency retrieval from the database. 
@@ -356,7 +435,7 @@ Data retention and other user specific data related storage will not be implemen
 
 \section{4 Gathering and Preparing Data}
 
-## Data Collection and Preparation
+\subsection{4.1 Data Collection and Preparation}
 
 * Since the project is still in its preliminary phase, artifitial data will be generated to keep the project going, however as the project progresses it is worth noting that real data must be used to ensure that the trained machine learning classifier is properly validated.
 
@@ -377,7 +456,7 @@ Data retention and other user specific data related storage will not be implemen
   + Join
   + Merge
 
-## Data Analysis and Model Selection
+\subsection{4.2 Data Analysis and Model Selection}
 
 * Before choosing any classifier to use as a predictor, we need to carefully analyze the generated datasets and visually represent the data using various graphical methods. We need to carefully inspect each feature.
 
@@ -417,7 +496,7 @@ Data retention and other user specific data related storage will not be implemen
 
 * The masters dataset contains approximately 17 real master Computer Science course codes as well as their descriptions.
 
-# Variable Dictionary
+\subsection{5.1  Variable Dictionary}
 
 The six datasets (STUDENTS.csv ,FIRST_YEAR.csv ,SECOND_YEAR.csv ,THRID_YEAR.csv ,HONOURS.csv ,MASTERS.csv) contain the following 8 variables.
 
