@@ -51,7 +51,17 @@ def test(did_pass,i):
         elif(X[i]==int(string_code)):
             msg="Case #{}(STRING INPUT): SUCCESSFULLY PASSED... FOR INPUT: STRING , RETURNED X IS EMPTY".format(i+1,X[i],array[i])
     else:
-        msg="Case #{}: FAILED...".format(i+1,X[i])
+        
+        if (X[i]>=2):
+            msg="Case #{}(POSITIVE INTERGER INPUT): FAILED...  FOR INPUT: {} , ONE OF THE OUTPUTS IS WRONG!".format(i+1,X[i])
+        elif(X[i]<0 and X[i]!=int(string_code)):
+            msg="Case #{}(NEGATIVE INTERGER INPUT): FAILED... FOR INPUT: NEGATIVE , ONE OF THE OUTPUTS IS WRONG!".format(i+1,X[i])
+        elif(X[i]==0):
+            msg="Case #{}(INPUT 0): FAILED... FOR INPUT: {} , ONE OF THE OUTPUTS IS WRONG!".format(i+1,X[i])
+        elif(X[i]==1):
+            msg="Case #{}(INPUT 1): FAILED... FOR INPUT: {} , ONE OF THE OUTPUTS IS WRONG!".format(i+1,X[i])
+        elif(X[i]==int(string_code)):
+            msg="Case #{}(STRING INPUT): FAILED... FOR INPUT: STRING , ONE OF THE OUTPUTS IS WRONG!".format(i+1,X[i])
     print(msg)
 
 def test_suite():
