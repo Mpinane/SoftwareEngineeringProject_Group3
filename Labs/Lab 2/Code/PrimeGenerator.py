@@ -12,5 +12,4 @@ def PrimeNumbers(X):
         counter=counter+1
     N=len(primes)
     return primes,N
-
-PrimeNumbers(19)   
+   
