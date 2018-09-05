@@ -1,0 +1,27 @@
+Test Plan: 
+Prime number generator
+
+Prepared by: 
+Lucky Mahlangu
+Sbusiso Mkhombe
+Thulisile Shipyana
+Mpinane Mohale
+
+TABLE OF CONTENTS 
+1.0	INTRODUCTION 
+
+The purpose of this task is to implement a function that takes in a positive integer and generate all the prime numbers that are less than or equal to that integer.
+And also, to implement a function that is going to test the prime number generator function using our preferred testing methods, providing a report for these testing procedures. 
+The codes were implemented using python programming language.
+
+2.0 OBJECTIVES AND TASKS 
+2.1 Objectives
+to implement a prime generator function and implement a function to test it.
+
+2.2 Tasks 
+Lucky Mahlangu- Implement the prime number function and the tester function
+Mpinane Mohale- 
+Sbusiso Mkhombe-
+Thulisile Shipyana- 
+
+
