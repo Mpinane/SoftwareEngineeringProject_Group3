@@ -1,3 +1,6 @@
+#To run on Linux: python -m unittest test_PrimeGen
+#Shows number of test cases (test functions) the PrimeNumbers functions passed
+#All the passed cases are possible handled inputs and run time scenarios
 import unittest 
 import time
 import sys
