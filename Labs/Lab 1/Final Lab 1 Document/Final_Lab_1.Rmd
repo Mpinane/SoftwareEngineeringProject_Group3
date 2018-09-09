@@ -18,9 +18,7 @@ output: pdf_document
                                     Sbusiso Mkhombe(1154046)
                                    Thulisile Shipyana(916781)
                                   
-# Github Repository
-
-[https://github.com/Mpinane/SoftwareEngineeringProject_Group3.git](https://github.com/Mpinane/SoftwareEngineeringProject_Group3.git)                                      
+                                        
 
 ```{r fig.width=15, fig.height=40,echo=FALSE}
 library(png)
