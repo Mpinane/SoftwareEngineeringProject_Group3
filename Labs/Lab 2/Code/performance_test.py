@@ -6,8 +6,8 @@ Created on Wed Sep  5 20:43:47 2018
 """
 
 import PrimeGenerator
-import csv
 import time
+import matplotlib.pyplot as plt
 
 def calcTime(i):
     start = time.time()
@@ -18,17 +18,23 @@ def calcTime(i):
 
 
 inputs = []
+outputs = []
 
 inputFile =  open("performance_test_inputfile.txt",'r')
 lines = inputFile.readlines()
 inputFile.close
+
 for i in lines:
     inputs.append(int(i.strip('\n')))
 
-outputFile =  open("performance_test_outputfile.csv",'w+')
-csvwriter = csv.writer(outputFile,delimiter=',',quotechar='"', quoting=csv.QUOTE_MINIMAL)
-csvwriter.writerow(["input"] + ["time"])
 for i in inputs:
-    csvwriter.writerow([i] + [calcTime(i)])
-outputFile.close()
+    sum = 0;
+    for j in range(1000):
+        sum = sum + calcTime(i)
+    avg = sum/100
+    outputs.append(avg)
 
+plt.figure(1)
+plt.plot(inputs, outputs)
+plt.xlabel('input size')
+plt.ylabel('time (sec)')
