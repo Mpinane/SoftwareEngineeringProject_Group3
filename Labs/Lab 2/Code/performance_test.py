@@ -34,7 +34,7 @@ for i in inputs:
     avg = sum/100
     outputs.append(avg)
 
-plt.figure(1)
+plt.figure(figsize=(15,10), dpi=100)
 plt.plot(inputs, outputs)
-plt.xlabel('input size')
+plt.xlabel('input')
 plt.ylabel('time (sec)')
