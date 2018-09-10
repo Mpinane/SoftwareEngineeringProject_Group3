@@ -28,18 +28,18 @@ class AlternativeTests(unittest.TestCase):
             end_time = time.time()
             
             if i >= 100000000:
-                if end_time - start_time >= i*0.001
+                if end_time - start_time >= i*0.001:
                     self.assertRaises(TimeoutError)
             
             elif i >= 10000000:
-                if end_time - start_time >= i*0.001
+                if end_time - start_time >= i*0.001:
                     self.assertRaises(TimeoutError)
             
             elif i >= 1000000:
-                if end_time - start_time >= i*0.0001
+                if end_time - start_time >= i*0.0001:
                     self.assertRaises(TimeoutError)
             
             else:
-                end_time - start_time >= i*0.00001
+                end_time - start_time >= i*0.00001:
                 self.assertRaises(TimeoutError)
                 #self.assertRaises(TimeoutError,PrimeNumbers,i) 
