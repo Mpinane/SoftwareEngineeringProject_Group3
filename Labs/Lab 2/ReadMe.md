@@ -22,7 +22,7 @@ In the Code folder(SoftwareEngineeringProject_Group3/Labs/Lab 2/Code/
 ) we run the tests with the command: python test_Generator.py
 This checks, tests and returns all test cases for the PrimeGenerator.py file. 
 
-The tester is required to run: pip install -r requiremwents.txt which will installs all  required dependencies and external libraries apart from python 3.
+The tester is required to run: pip install -r requirements.txt which will installs all  required dependencies and external libraries apart from python 3.
 
 In the Alternate folder(SoftwareEngineeringProject_Group3/Labs/Lab 2/Code/Alternate/
 ) there is a PrimeGen.py file and a test_PrimeGen.py file.
