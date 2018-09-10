@@ -52,11 +52,17 @@ Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Documen
 
 ## 7.Authors
 
-Code and Report - i. Sbusiso Mkhombe
+Code and Report - 
+
+                  i. Sbusiso Mkhombe
 
                   ii. Lucky Mahlangu
 
-Performance and Stress Testing - i. Mpinane Mohale
+Performance and Stress Testing - 
 
-Reafme file and Documentation - i. Thulisile Shipyana
+                                i. Mpinane Mohale
+
+Reafme file and Documentation - 
+                    
+                                i. Thulisile Shipyana
 
