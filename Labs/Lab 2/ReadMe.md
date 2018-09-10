@@ -31,7 +31,7 @@ The PrimeGen.py file is incorporated and tested in the test_PrimeGen.py file so 
 To run the test_PrimeGen.py type in the terminal: python -m unittest test_PrimeGen
 
 To generate and plot the performance graph: python performance_test.py
-The data folder provides a directory for inputFile = open("performance_test_inputfile.txt",'r') which is in line 23 in 
+The data folder provides a directory for inputFile = open("performance_test_inputfile.txt",'r') which is in line 23 in performance_test.py
 
 
 ## 4.Features:
