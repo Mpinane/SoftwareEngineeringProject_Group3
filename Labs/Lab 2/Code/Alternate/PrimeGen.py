@@ -10,7 +10,7 @@ def PrimeNumbers(X):
         raise TypeError("Input can not be boolean.")
     elif type(X) == complex:
         raise TypeError("Input can not be a complex number.")
-    elif len(str(X)) >= 10:
+    elif len(str(X)) >= 10000000:
         raise ValueError("Input too Large.")
     elif type(X) not in [int]:
         raise TypeError("Please Enter a Postive Integer.")

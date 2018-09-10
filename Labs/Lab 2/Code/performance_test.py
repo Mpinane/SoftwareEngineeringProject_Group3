@@ -20,7 +20,7 @@ def calcTime(i):
 inputs = []
 outputs = []
 
-inputFile =  open("performance_test_inputfile.txt",'r')
+inputFile =  open("/home/lucky/SoftwareEngineeringProject_Group3/Labs/Lab 2/Data/performance_test_inputfile.txt",'r')
 lines = inputFile.readlines()
 inputFile.close
 
@@ -38,3 +38,4 @@ plt.figure(figsize=(15,10), dpi=100)
 plt.plot(inputs, outputs)
 plt.xlabel('input')
 plt.ylabel('time (sec)')
+plt.show()
