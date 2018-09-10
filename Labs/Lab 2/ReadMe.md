@@ -15,10 +15,20 @@ The program requires python 3 to be executed. The Program was implemented and te
 
 3.Installing:
 
-In the Alternate folder there is a PrimeGen.py file and a test_PrimeGen.py file.
+In the Code folder(SoftwareEngineeringProject_Group3/Labs/Lab 2/Code/
+) we run the tests with the command: python test_Generator.py
+This checks, tests and returns all test cases for the PrimeGenerator.py file. 
+
+The tester is required to run: pip install -r requiremwents.txt which will installs all  required dependencies and external libraries apart from python 3.
+
+In the Alternate folder(SoftwareEngineeringProject_Group3/Labs/Lab 2/Code/Alternate/
+) there is a PrimeGen.py file and a test_PrimeGen.py file.
 The PrimeGen.py file is incorporated and tested in the test_PrimeGen.py file so we only need to run the test file to test the program.
 
 To run the test_PrimeGen.py type in the terminal: python -m unittest test_PrimeGen
+
+To generate and plot the performance graph: python performance_test.py
+The data folder provides a directory for inputFile = open("performance_test_inputfile.txt",'r') which is in line 23 in 
 
 
 4.Features:
@@ -28,12 +38,12 @@ The program intends to tests our Prime Number Generator function and return an a
 
 5.Break down into end to end tests
 
-Unit testing is performed to check the functions reliability and functionality. This is explained extensively in final_lab_2 under SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document.
+Unit testing is performed to check the functions reliability and functionality. This is explained extensively in final_lab_2.pdf under SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document.
 Refer to 3. for instructions on how to run the test file.
 
 
 6.Screenshots
-
+Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/final_lab_2.pdf
 
 7.Authors
 
@@ -44,4 +54,3 @@ Performance and Stress Testing - i. Mpinane Mohale
 
 Reafme file and Documentation - i.Thulisile Shipyana
 
-Acknowledgments ??
