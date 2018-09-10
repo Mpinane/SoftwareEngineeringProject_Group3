@@ -42,12 +42,15 @@ Unit testing is performed to check the functions reliability and functionality. 
 Refer to 3. for instructions on how to run the test file.
 
 
-6.Screenshots
+6.Screenshots:
+
 Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/final_lab_2.pdf
+
 
 7.Authors
 
 Code and Report - i.Sbusiso Mkhombe
+
                   ii. Lucky Mahlangu
 
 Performance and Stress Testing - i. Mpinane Mohale
