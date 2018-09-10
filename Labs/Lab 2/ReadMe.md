@@ -39,7 +39,7 @@ The data folder provides a directory for inputFile = open("performance_test_inpu
 The program intends to tests our Prime Number Generator function and return an array containing all prime numbers below X, where X is considerable array of possible inputs. The function also returns the generated prime number array length.
 
 
-## 5.Break down into end to end tests
+## 5.Test Break Down:
 
 Unit testing is performed to check the functions reliability and functionality. This is explained extensively in final_lab_2.pdf under SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document.
 Refer to 3. for instructions on how to run the test file.
@@ -52,11 +52,11 @@ Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Documen
 
 ## 7.Authors
 
-Code and Report - i.Sbusiso Mkhombe
+Code and Report - i. Sbusiso Mkhombe
 
                   ii. Lucky Mahlangu
 
 Performance and Stress Testing - i. Mpinane Mohale
 
-Reafme file and Documentation - i.Thulisile Shipyana
+Reafme file and Documentation - i. Thulisile Shipyana
 
