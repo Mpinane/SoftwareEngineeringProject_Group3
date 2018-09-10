@@ -36,7 +36,7 @@ The data folder provides a directory for inputFile = open("performance_test_inpu
 
 ## 4.Features:
 
-The program intends to tests our Prime Number Generator function and return an array containing all prime numbers below X, where X is considerable array of possible inputs. The function also returns the generated prime number array length.
+The program intends to tests our Prime Number Generator function and return an array containing all prime numbers below X, where X is an array of possible inputs. The function also returns the generated prime number array length.
 
 
 ## 5.Test Break Down:
