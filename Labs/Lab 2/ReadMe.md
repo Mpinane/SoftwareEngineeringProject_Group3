@@ -8,7 +8,7 @@
 We have developed and implemented a function PrimeNumbers() that takes a positive
 integer number X, and generates all prime numbers less than or equal to X. We have also included a main program that serves as a test-driver to test various scenarios of possible misuse and proper use of this module. Error codes are to be returned if invalid inputs are taken in by the module. 
 
-**The complete report is found under SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/Final_Lab_2.pdf **
+#### The complete report is found under SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/Final_Lab_2.pdf
 
 
 ## 2.Prerequisites:
