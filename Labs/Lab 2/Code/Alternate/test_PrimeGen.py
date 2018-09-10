@@ -5,14 +5,10 @@ import unittest
 import time
 import sys
 from PrimeGen import PrimeNumbers
+from PrimeGen import PrimeNumberCheck
+import random
 
 class AlternativeTests(unittest.TestCase):
-    def test_value(self):
-        for i in range(X): #X same as Parameter passed to PrimeNumbers(X)
-        #for i in range(len(PrimeNumbers(X)[0])):    
-            if not self.assertTrue(isPrime([PrimeNumbers(X)[0]][i])):
-                self.assertRaises(ValueError, PrimeNumbers(X)[0][i])
-            
                 
     def test_type(self):
         self.assertRaises(TypeError,PrimeNumbers,True)
@@ -21,6 +17,7 @@ class AlternativeTests(unittest.TestCase):
         self.assertRaises(TypeError,PrimeNumbers,[1,2,3,4,5])
         self.assertRaises(TypeError,PrimeNumbers,list(["a","b","c","d","e"]))
     
+<<<<<<< HEAD
     def test_timePerformance(self):
         for i in range(1,1000000,10000):
             start_time = time.time()
@@ -43,3 +40,5 @@ class AlternativeTests(unittest.TestCase):
                 end_time - start_time >= i*0.00001:
                 self.assertRaises(TimeoutError)
                 #self.assertRaises(TimeoutError,PrimeNumbers,i) 
+=======
+>>>>>>> dev
