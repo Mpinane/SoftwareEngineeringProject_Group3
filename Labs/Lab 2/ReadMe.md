@@ -47,7 +47,7 @@ Refer to 3. for instructions on how to run the test file.
 
 ## 6.Screenshots:
 
-Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/final_lab_2.pdf
+Please refer to SoftwareEngineeringProject_Group3/Labs/Lab 2/Final Lab 2 Document/Final_Lab_2.pdf
 
 
 ## 7.Authors
