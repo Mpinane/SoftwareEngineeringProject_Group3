@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html lang="en-us" >
+<head>
+<title>Create Account | Avi</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+{% load static %}
+<link rel="stylesheet" href="{% static 'avi_app/style.css' %}"
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0">
+</head>
+
+
+<body>
+	<div>
+		<img src="{% static 'avi_app/images/avi.jpg' %}" alt="logo"/>
+		<h3>Create Account</h3>
+		<form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
+			
+				<input for="student_name" type="text" name="student_name" placeholder="Student Name" autofocus required id="student_name">
+			<br/>
+
+			
+                    <input for="student_surname" type="text" name="student_surname" placeholder="Student Surname" autofocus required id="student_surname">
+            <br/>
+            
+                    <input for="student_number" type="text" name="student_number" placeholder="Student Number" autofocus required id="student_number">
+            <br/>
+                    
+            <select>
+                <option value="-1">Completed Level of Study</option>
+                <option value="YOS1">YOS1</option>
+                <option value="YOS1">YOS2</option>
+                <option value="YOS1">YOS3</option>
+                <option value="Honours">Honours</option>
+                <option value="Masters">Masters</option>
+            </select>
+            <br/>
+            <input for="student_password" type="text" name="student_password" placeholder="Password" autofocus required id="student_password">
+            <br/>
+
+            <input for="student_password" type="text" name="confirm_password" placeholder="Confirm Password" autofocus required id="confirm_password">
+            <br/>
+				<input type="submit" value="Create Account">
+			
+		</form>
+		
+	</div>
+
+</body>
+</html>
