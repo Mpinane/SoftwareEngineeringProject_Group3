@@ -31,12 +31,14 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'avi_app.apps.AviAppConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    
 ]
 
 MIDDLEWARE = [
@@ -75,8 +77,13 @@ WSGI_APPLICATION = 'avi_project.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.mysql',
+       # 'NAME': os.path.join(BASE_DIR, 'db.mysql'),
+        'NAME': 'd1363679',
+        'USER': 's1363679',
+        'PASSWORD': 's1363679',
+        'HOST': 'lamp.ms.wits.ac.za',
+        
     }
 }
 
@@ -105,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'CAT'
 
 USE_I18N = True
 
