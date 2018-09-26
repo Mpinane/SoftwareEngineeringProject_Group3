@@ -15,7 +15,14 @@ def home(request):
     return render(request,'avi_app/home.html')
 
 def courses(request):
-    return render(request,'avi_app/courses.html')
+    context = {
+        'nums': [1,2,3,4,5,6,7,8,9,10],
+        'courses': ["COMS1100","MATH1024","INFO1000"]
+    }
+    return render(request,'avi_app/courses.html',context)
+
+def edit_courses(request):
+    return render(request,'avi_app/edit_courses.html')
 
 def recommendations(request):
     return render(request,'avi_app/recommendations.html')
