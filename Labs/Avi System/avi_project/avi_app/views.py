@@ -25,7 +25,15 @@ def edit_courses(request):
     return render(request,'avi_app/edit_courses.html')
 
 def recommendations(request):
-    return render(request,'avi_app/recommendations.html')
+    context = {
+        'nums': [1,2,3,4,5,6,7,8,9,10]
+    }
+    return render(request,'avi_app/recommendations.html',context)
 
 def account_settings(request):
-    return render(request,'avi_app/account_settings.html')
+    context = {
+        'first': "Mpinane",
+        'surname': "Mohale",
+        'student_number': "1363679"
+    }
+    return render(request,'avi_app/account_settings.html',context)
