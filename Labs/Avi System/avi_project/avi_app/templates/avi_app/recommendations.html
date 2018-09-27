@@ -11,7 +11,7 @@
 
 <body>
 
-    <div>
+    <header>
         <div>
             <img src="{% static '/avi_app/images/avi.jpg'%}">
         </div>
@@ -21,13 +21,13 @@
                 <a href="/home" ><li>Home</li></a>
                 <a href="/courses"  ><li>Courses</li></a>
                 <a href="/recommendations" class="active"><li>Recommendations</li></a>
-                <a href="/acccount_settings"> <li>Account Settings</li></a>
+                <a href="/account_settings"> <li>Account Settings</li></a>
                 <a href="/login"><li>Logout</li></a>
             </ul>
         </div>
-    </div>
+    </header>
 
-    <div>
+    <div id="recommendations">
         <div class="courses">
             <h3>Your Recommendations</h3>
             <table>
@@ -45,7 +45,7 @@
             </table>
         </div>
 
-        <div class="courses">
+        <div class="courses" id="second">
             <h3>Get Recommendation</h3>
             <br>
             <form>

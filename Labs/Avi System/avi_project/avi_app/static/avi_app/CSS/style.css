@@ -26,18 +26,18 @@ input[type=number] {
     width: 210px;
 }
 
-input[type=submit], button{
+input[type=submit], input[type=button], button{
     background: lightgrey;
     border: 2px solid grey; 
 }
 
-input[type=submit]:hover, button:hover{
+input[type=submit]:hover, input[type=button]:hover, button:hover{
     cursor:pointer;
     background:white;
     border: 2px solid black;
 }
 
-#home, header, #courses {
+#home, header, #courses, #recommendations, #account_settings {
     margin: auto;
     width:600px;
     text-align: center;
@@ -72,15 +72,35 @@ header a {
 }
 
 #home a {
-    display: inline-block;
+    display: inline-table;
     padding:10px;
 }
 
 #courses {
     border: 1px solid black;
+    width: 900px;
 }
 
-.courses table {
-    width:400px;
+#recommendations {
     border: 1px solid black;
+    width: 900px;
 }
+.courses table, tr {
+    border: 1px solid black;
+    width: 400px;
+}
+
+
+#add_more{
+    float:left;
+}
+
+#add_courses {
+    text-align: left;
+}
+
+#second {
+    width: 400px;
+}
+
+

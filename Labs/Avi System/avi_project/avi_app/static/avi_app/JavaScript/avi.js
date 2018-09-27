@@ -3,9 +3,10 @@ $(document).ready(function(){
     $('#add_more').click(function(e){
         $('#add_courses').append(
         '<div>'+
-            '<input name="courses[]" id="courses" placeholder="Enter course code"/>'+
-            '<input type="number" placeholder="percentage(%)" name="grades[]"/>'+
-            '<input type="button" id="delete_course" value="Delete"/>'+
+            '<br/><br/>'+
+            '<input name="courses[]" id="course" placeholder="Enter course code"/>'+
+            ' <input type="number" placeholder="percentage(%)" name="grades[]"/>'+
+            ' <input type="button" id="delete_course" value="Delete"/>'+
         '</div>');
   
     });

@@ -41,7 +41,7 @@
     </header>
 
     <div id="courses">
-        <div class="courses">
+        <div class="courses first">
             <h3>Your Courses</h3>
             <table>
                 <tr>
@@ -57,6 +57,8 @@
                 {% endfor %}
             </table>
 
+            <br>
+            <br>
             <a href="/edit_courses"><button>Edit Courses</button></a>
         </div>
 
@@ -64,10 +66,11 @@
             <h3>Add Courses</h3>
             <br>
             <form>
-                <div id="add_courses" class="ui-widget">
+                <div id="add_courses">
                     <div>
                             <input type="text" name="courses[]" id="course" placeholder="Enter course code"/>
-                                <input type="number" placeholder="percentage(%)" name="grades[]"/>
+                            <input type="number" placeholder="percentage(%)" name="grades[]"/>
+                           
                     </div>
                     
                 </div>

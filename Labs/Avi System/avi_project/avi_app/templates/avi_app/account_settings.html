@@ -11,7 +11,7 @@
 
 <body>
 
-    <div>
+    <header>
         <div>
             <img src="{% static '/avi_app/images/avi.jpg'%}">
         </div>
@@ -25,17 +25,21 @@
                 <a href="/login"><li>Logout</li></a>
             </ul>
         </div>
-    </div>
+    </header>
 
-    <div>
+    <div id="account_settings">
         <div class="settings">
             Firstname:
             <br/>
+            <br/>
             Surname:
+            <br/>
             <br/>
             Student Number:
             <br/>
+            <br/>
             Completed Year of Study:
+            <br/>
             <br/>
             Change Password:
 
@@ -45,9 +49,12 @@
             <form>
                     {{ first }}
                     <br/>
+                    <br/>
                     {{ surname }}
                     <br/>
+                    <br/>
                     {{ student_number }}
+                    <br/>
                     <br/>
                     <select>
                         <option value="-1">Completed Level of Study</option>
@@ -58,11 +65,15 @@
                         <option value="Masters">Masters</option>
                     </select>
                     <br/>
+                    <br/>
                    <input type="password" id="old_password" placeholder="Old Password" />
+                   <br/>
                    <br/>
                    <input type="password" id="new_password" placeholder="New Password" />
                    <br/>
+                   <br/>
                    <input type="password" id="confirm_password" placeholder="Confirm Password" />
+                   <br/>
                    <br/>
 
                    <input type="submit" value="Make Changes"/>
