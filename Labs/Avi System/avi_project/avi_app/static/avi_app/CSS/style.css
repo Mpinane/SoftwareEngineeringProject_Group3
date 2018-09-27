@@ -37,7 +37,7 @@ input[type=submit]:hover, input[type=button]:hover, button:hover{
     border: 2px solid black;
 }
 
-#home, header, #courses, #recommendations, #account_settings {
+#home, header, #courses, #recommendations, #account_settings, #edit_courses {
     margin: auto;
     width:600px;
     text-align: center;

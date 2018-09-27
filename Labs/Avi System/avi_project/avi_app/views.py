@@ -24,7 +24,10 @@ def courses(request):
     return render(request,'avi_app/courses.html',context)
 
 def edit_courses(request):
-    return render(request,'avi_app/edit_courses.html')
+    context = {
+        'nums': [1,2,3,4,5,6,7,8,9,10]
+    }
+    return render(request,'avi_app/edit_courses.html',context)
 
 def recommendations(request):
     context = {
