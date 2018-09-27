@@ -24,23 +24,23 @@
 
 <body>
 
-    <div>
+    <header>
         <div>
             <img src="{% static '/avi_app/images/avi.jpg'%}">
         </div>
 
         <div>
             <ul>
-                <a href="/home" ><li>Home</li></a>
-                <a href="/courses" class="active" ><li>Courses</li></a>
-                <a href="/recommendations"><li>Recommendations</li></a>
-                <a href="/acccount_settings"> <li>Account Settings</li></a>
-                <a href="/login"><li>Logout</li></a>
+                <a href="/home" ><li><u>Home</u></li></a>
+                <a href="/courses" class="active" ><li><u>Courses</u></li></a>
+                <a href="/recommendations"><li><u>Recommendations</u></li></a>
+                <a href="/acccount_settings"> <li><u>Account Settings</u></li></a>
+                <a href="/login"><li><u>Logout</u></li></a>
             </ul>
         </div>
-    </div>
+    </header>
 
-    <div>
+    <div id="courses">
         <div class="courses">
             <h3>Your Courses</h3>
             <table>

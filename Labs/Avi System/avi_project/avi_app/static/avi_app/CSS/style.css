@@ -1,3 +1,79 @@
 .courses, .settings{
     display:inline-table;
 }
+
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:80px;
+}
+
+#login, #create_account {
+    margin: auto;
+    width:600px;
+    margin-top:150px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+form input,select,button {
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+input[type=number] {
+    width: 210px;
+}
+
+input[type=submit], button{
+    background: lightgrey;
+    border: 2px solid grey; 
+}
+
+input[type=submit]:hover, button:hover{
+    cursor:pointer;
+    background:white;
+    border: 2px solid black;
+}
+
+#home, header, #courses {
+    margin: auto;
+    width:600px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+header ul {
+    list-style: none;
+    text-decoration: none;
+    
+    
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+header a {
+    color: black;
+    
+}
+
+.active {
+    color: rgb(4, 137, 219);
+}
+
+#home button{
+    width: 350px;
+    height:150px;
+    
+}
+
+#home a {
+    display: inline-block;
+    padding:10px;
+}
+
+

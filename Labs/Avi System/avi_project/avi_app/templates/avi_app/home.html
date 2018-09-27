@@ -5,34 +5,36 @@
 <title>Home | Avi</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
 {% load static %}
-<link rel="stylesheet" href="{% static 'avi_app/style.css' %}"
+<link rel="stylesheet" href="{% static 'avi_app/CSS/style.css' %}"
 <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
 </head>
 
 
 <body>
 
-    <div>
-        <div>
-            <img src="{% static '/avi_app/images/avi.jpg'%}">
-        </div>
+    
 
-        <div>
-            <ul>
-                <a href="/home" class="active"><li>Home</li></a>
-                <a href="/courses"><li>Courses</li></a>
-                <a href="/recommendations"><li>Recommendations</li></a>
-                <a href="/acccount_settings"> <li>Account Settings</li></a>
-                <a href="/login"><li>Logout</li></a>
-            </ul>
-        </div>
-    </div>
-
-    <div>
+        <header>
+                <div>
+                        <img src="{% static '/avi_app/images/avi.jpg'%}">
+                    </div>
+            
+                    <div>
+                        <ul>
+                            <a href="/home" class="active"><li><u>Home</u></li></a>
+                            <a href="/courses"><li><u>Courses</u></li></a>
+                            <a href="/recommendations"><li><u>Recommendations</u></li></a>
+                            <a href="/acccount_settings"> <li><u>Account Settings</u></li></a>
+                            <a href="/login"><li><u>Logout</u></li></a>
+                        </ul>
+                    </div>
+        </header>
+        
+    
+    <div id="home">
         <a href="/courses"><button>Add Courses</button></a>
-
         <a href="/recommendations"><button>Get Recommendation</button></a>
+    
     </div>
-
 </body>
 </html>
