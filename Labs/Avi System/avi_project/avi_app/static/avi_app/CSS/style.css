@@ -76,4 +76,11 @@ header a {
     padding:10px;
 }
 
+#courses {
+    border: 1px solid black;
+}
 
+.courses table {
+    width:400px;
+    border: 1px solid black;
+}
