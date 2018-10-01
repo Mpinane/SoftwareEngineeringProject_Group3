@@ -15,11 +15,13 @@
 		<img src="{% static 'avi_app/images/avi.jpg' %}" alt="logo"/>
 		<h3>Login</h3>
 		<form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
-			
-				<input for="student_number" type="text" name="student_number" placeholder="Student Number" autofocus required id="student_number">
+			{% csrf_token %}
+			{{form.student_id}}
+				<!-- <input for="student_number" type="text" name="student_number" placeholder="Student Number" autofocus required id="student_number"> -->
 			<br/>
 			<br/>
-				<input for="student_password" type="password" Placeholder="Password" name="student_password" required id="student_password">
+			{{form.student_password}}
+				<!-- <input for="student_password" type="password" Placeholder="Password" name="student_password" required id="student_password"> -->
 			<br/>
 			<br/>
 				<input type="submit" value="Log in">

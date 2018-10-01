@@ -65,17 +65,20 @@
         <div class="courses">
             <h3>Add Courses</h3>
             <br>
-            <form>
+            <form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
+                {% csrf_token %}
                 <div id="add_courses">
                     <div>
-                            <input type="text" name="courses[]" id="course" placeholder="Enter course code"/>
-                            <input type="number" placeholder="percentage(%)" name="grades[]"/>
+                        {{form.course_id}}
+                        {{form.course_mark}}
+                           <!-- <input type="text" name="courses[]" id="course" placeholder="Enter course code"/>
+                            <input type="number" placeholder="percentage(%)" name="grades[]"/>-->
                            
                     </div>
                     
                 </div>
                 <br/>
-                <input type="button" value="add more" id="add_more"/>
+               <!-- <input type="button" value="add more" id="add_more"/> -->
                 <br/>
                 <br/>
                 <input type="submit" value="Add Course(s)"/>

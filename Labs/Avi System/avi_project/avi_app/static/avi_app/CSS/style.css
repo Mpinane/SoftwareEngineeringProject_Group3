@@ -22,7 +22,7 @@ form input,select,button {
     border: 1px solid grey;
 }
 
-input[type=number] {
+input[type=number], select {
     width: 210px;
 }
 
