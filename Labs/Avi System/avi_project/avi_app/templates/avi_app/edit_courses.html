@@ -29,11 +29,12 @@
 
     <div id="edit_courses">
         <h3>Edit Courses</h3>
-            <form>
-                {% for i in nums %}
-                    <input type="text" name="courses[]" value="COMS{{i}}"/>
-                    <input type="number" name="grades" value="{{i}}"/>
-                    <input type="button" id="delete_course" name="COMS{{i}}" value="Delete"/>
+            <form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
+                {% csrf_token %}
+                {% for i in enrolment %}
+                    <input type="text" readonly name="{{i.id}}_course" value="{{i.course_id.course_code}}"/>
+                    <input type="number" name="{{i.id}}_grade" value="{{i.course_mark}}"/>
+                    <a href="/delete/{{i.id}}"><input type="button" value="Delete"/></a>
                     <br/>
                     <br/>
                 {% endfor %}
