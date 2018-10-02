@@ -69,8 +69,7 @@ def home(request):
 def courses(request):
     form = AddCourseForm(request.POST)
     context = {
-        'nums': [1,2,3,4,5,6,7,8,9,10],
-        'courses': ["COMS1100","MATH1024","INFO1000"],
+        'enrolment': Enrolment.objects.filter(student_id=request.session.get('id')),
         'form': form
     }
 

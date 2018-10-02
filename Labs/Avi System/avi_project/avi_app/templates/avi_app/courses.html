@@ -46,13 +46,13 @@
             <table>
                 <tr>
                         <th>Course</th>
-                        <th>Grade</th>
+                        <th>Grade(%)</th>
                 </tr>
 
-                {% for i in nums %}
+                {% for i in enrolment %}
                     <tr>
-                        <td>COMS{{i}}</td>
-                        <td> {{i}}</td>
+                        <td>{{i.course_id.course_code}}</td>
+                        <td> {{i.course_mark}}</td>
                     </tr>
                 {% endfor %}
             </table>
