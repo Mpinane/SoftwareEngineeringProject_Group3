@@ -69,8 +69,7 @@ def home(request):
 def courses(request):
     form = AddCourseForm(request.POST)
     context = {
-        'nums': [1,2,3,4,5,6,7,8,9,10],
-        'courses': ["COMS1100","MATH1024","INFO1000"],
+        'enrolment': Enrolment.objects.filter(student_id=request.session.get('id')),
         'form': form
     }
 
@@ -79,7 +78,7 @@ def courses(request):
         # if(form.is_valid()):
         courses= request.POST.get("course_id")
         student_id = Student.objects.get(student_id=request.session.get('id'))
-        course_id = Course.objects.get(course_code=request.POST.get(courses[1]))
+        course_id = Course.objects.get(course_code=request.POST.get("course_id"))
         course_mark = request.POST.get("course_mark")
         Enrolment.objects.create(student_id = student_id, 
                             course_id = course_id,
@@ -92,13 +91,35 @@ def courses(request):
 
 def edit_courses(request):
     context = {
-        'nums': [1,2,3,4,5,6,7,8,9,10]
+        'enrolment': Enrolment.objects.filter(student_id=request.session.get('id')),
     }
+
+    if(request.method == 'POST'):
+        
+        for e in Enrolment.objects.filter(student_id=request.session.get('id')):
+            course_mark = request.POST.get(str(e.id) + "_grade")
+            e.course_mark = course_mark
+            e.save()
+        return redirect('courses')
+
     return render(request,'avi_app/edit_courses.html',context)
 
 def recommendations(request):
+    enrol =  Enrolment.objects.filter(student_id=request.session.get('id'))
+    highest_level = Student.objects.get(student_id=request.session.get('id')).student_current_level
+    course_and_mark=[]
+    course_and_mark.append([])
+    course_and_mark.append([])
+
+    for e in enrol:
+        course_and_mark[0].append(e.course_id.course_code)
+        course_and_mark[1].append(e.course_mark)
+
+    
     context = {
-        'nums': [1,2,3,4,5,6,7,8,9,10]
+        'nums': [1,2,3,4,5,6,7,8,9,10],
+        'enrol': course_and_mark,
+        'level': highest_level
     }
     return render(request,'avi_app/recommendations.html',context)
 
@@ -109,3 +130,8 @@ def account_settings(request):
         'student_number': "1363679"
     }
     return render(request,'avi_app/account_settings.html',context)
+
+def delete(request,id):
+    #return render(request,'avi_app/account_settings.html',context)
+    Enrolment.objects.get(id=id).delete()
+    return redirect('courses')

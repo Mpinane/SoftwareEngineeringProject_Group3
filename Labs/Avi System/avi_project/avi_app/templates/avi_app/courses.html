@@ -46,13 +46,13 @@
             <table>
                 <tr>
                         <th>Course</th>
-                        <th>Grade</th>
+                        <th>Grade(%)</th>
                 </tr>
 
-                {% for i in nums %}
+                {% for i in enrolment %}
                     <tr>
-                        <td>COMS{{i}}</td>
-                        <td> {{i}}</td>
+                        <td>{{i.course_id.course_code}}</td>
+                        <td> {{i.course_mark}}</td>
                     </tr>
                 {% endfor %}
             </table>
@@ -70,15 +70,15 @@
                 <div id="add_courses">
                     <div>
                         {{form.course_id}}
-                        {{form.course_mark}}
-                           <!-- <input type="text" name="courses[]" id="course" placeholder="Enter course code"/>
+                        {{form.course_mark}} 
+                            <!--<input type="text" name="courses[]" id="course" placeholder="Enter course code"/>
                             <input type="number" placeholder="percentage(%)" name="grades[]"/>-->
                            
                     </div>
                     
                 </div>
                 <br/>
-               <!-- <input type="button" value="add more" id="add_more"/> -->
+                <!--<input type="button" value="add more" id="add_more"/>-->
                 <br/>
                 <br/>
                 <input type="submit" value="Add Course(s)"/>
