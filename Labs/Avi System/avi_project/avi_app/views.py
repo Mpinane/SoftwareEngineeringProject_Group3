@@ -105,8 +105,21 @@ def edit_courses(request):
     return render(request,'avi_app/edit_courses.html',context)
 
 def recommendations(request):
+    enrol =  Enrolment.objects.filter(student_id=request.session.get('id'))
+    highest_level = Student.objects.get(student_id=request.session.get('id')).student_current_level
+    course_and_mark=[]
+    course_and_mark.append([])
+    course_and_mark.append([])
+
+    for e in enrol:
+        course_and_mark[0].append(e.course_id.course_code)
+        course_and_mark[1].append(e.course_mark)
+
+    
     context = {
-        'nums': [1,2,3,4,5,6,7,8,9,10]
+        'nums': [1,2,3,4,5,6,7,8,9,10],
+        'enrol': course_and_mark,
+        'level': highest_level
     }
     return render(request,'avi_app/recommendations.html',context)
 
