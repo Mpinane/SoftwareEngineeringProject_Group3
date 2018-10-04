@@ -60,13 +60,13 @@ run 'django-admin --version' to check if installation was successful.
 ##### Windows:
                   ~$: pip install pytest
                   ~$: pip install pytest-django
-                  ~$: pip instsall pytes-cov
+                  ~$: pip instsall pytest-cov
                   ~$: pip install mixer
           
 ##### Linux and MacOS:
                   ~$: sudo pip install pytest
                   ~$: sudo pip install pytest-django
-                  ~$: sudo pip instsall pytes-cov
+                  ~$: sudo pip instsall pytest-cov
                   ~$: sudo pip install mixer
 
   // Instructions To be completed
