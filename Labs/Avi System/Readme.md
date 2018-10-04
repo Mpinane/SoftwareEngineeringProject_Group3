@@ -37,16 +37,16 @@ run 'django-admin --version' to check if installation was successful.
 
 ### Built With:
                 i. Python - High Level Programming Language
-                ii. Django - The web framework used
-                iii. CSS - Style Sheet Language
-                iv. HTML - Markup Language
+               ii. Django - The web framework used
+              iii. CSS - Style Sheet Language
+               iv. HTML - Markup Language
 
 
 ### Additional System Features:
               i. New Users can sign-up.
-              ii. Existing users can login and add academic infomation.
-              iii. Existing Users can edit user infomation and course detail.
-              iv. Machine Learning is used extensively in course and grade Predictions. These machine learning algorithms were fed training, validation and testing data of past post graduate students.
+             ii. Existing users can login and add academic infomation.
+            iii. Existing Users can edit user infomation and course detail.
+             iv. Machine Learning is used extensively in course and grade Predictions. These machine learning algorithms were fed training, validation and testing data of past post graduate students.
               v. ??
 
 
