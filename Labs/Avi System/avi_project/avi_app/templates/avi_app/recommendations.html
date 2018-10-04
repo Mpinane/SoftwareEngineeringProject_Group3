@@ -52,7 +52,8 @@
         <div class="courses" id="second">
             <h3>Get Recommendation</h3>
             <br>
-            <form>
+            <form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
+                {% csrf_token %}
                     <div>
                             <select id = "level_of_study">
                                     <option name="honours" value="-1">Level Of Study<option/>
