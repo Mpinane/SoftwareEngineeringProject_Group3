@@ -118,8 +118,7 @@ def recommendations(request):
     
     context = {
         'nums': [1,2,3,4,5,6,7,8,9,10],
-        'enrol': course_and_mark,
-        'level': highest_level
+        'predict': Predicted.objects.filter(student_id=request.session.get('id')),
     }
     return render(request,'avi_app/recommendations.html',context)
 

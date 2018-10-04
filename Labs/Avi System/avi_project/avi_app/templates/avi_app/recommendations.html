@@ -32,19 +32,21 @@
             
         <div class="courses">
             <h3>Your Recommendations</h3>
-            <table>
-                <tr>
-                        <th>Course</th>
-                        <th>Grade</th>
-                </tr>
-
-                {% for i in nums %}
+            {% if predict.len != 0 %}
+                <table>
                     <tr>
-                        <td>COMS{{i}}</td>
-                        <td> {{i}}</td>
+                            <th>Course</th>
+                            <th>Grade(symbol)</th>
                     </tr>
-                {% endfor %}
-            </table>
+
+                    {% for i in predict %}
+                        <tr>
+                            <td>{{i.course_id.course_code}}</td>
+                            <td> {{i.predicted_mark}}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            {% endif %}
         </div>
 
         <div class="courses" id="second">
@@ -67,10 +69,6 @@
         </div>
     </div>
 
-    dfghjkl;
-    {% for e in enrol %}
-    <p>Hellllo {{e}}</p> 
-    {% endfor %}
 
     {{level}}
 </body>
