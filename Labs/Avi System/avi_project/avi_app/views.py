@@ -4,6 +4,8 @@ from django.shortcuts import render
 
 from django.shortcuts import redirect
 
+import course_recommender
+
 #from django.utils import simplejson
 from django.http import HttpResponseRedirect
 from .forms import CreateAccountForm
@@ -115,7 +117,20 @@ def recommendations(request):
         course_and_mark[0].append(e.course_id.course_code)
         course_and_mark[1].append(e.course_mark)
 
-    
+    if(request.method == 'POST'):
+        course_recommender.recommend_course(enrol,highest_level)
+        predicted = course_recommender.predict()
+        student_id = Student.objects.get(student_id=request.session.get('id'))
+
+        for i in range(len(predicted[0])):
+            course_id = Course.objects.get(course_code=predicted[0][i])
+            course_mark = predicted[1][i]
+            Predicted.objects.create(student_id = student_id, 
+                            course_id = course_id,
+                            course_mark =  course_mark,)
+
+        return redirect('recommendations')
+        
     context = {
         'nums': [1,2,3,4,5,6,7,8,9,10],
         'predict': Predicted.objects.filter(student_id=request.session.get('id')),

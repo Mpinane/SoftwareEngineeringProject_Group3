@@ -16,6 +16,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 
+
+admin.site.site_header = "Avi Admin"
+admin.site.site_title = "Avi Admin Portal"
+admin.site.index_title = "Welcome to Avi Portal"
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('avi_app.urls')),
