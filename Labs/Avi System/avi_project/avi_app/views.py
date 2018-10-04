@@ -4,7 +4,12 @@ from django.shortcuts import render
 
 from django.shortcuts import redirect
 
-import course_recommender
+import pandas as pd
+import numpy as np
+from sklearn import tree
+
+import avi_app.course_recommender 
+
 
 #from django.utils import simplejson
 from django.http import HttpResponseRedirect
@@ -114,25 +119,27 @@ def recommendations(request):
     course_and_mark.append([])
 
     for e in enrol:
-        course_and_mark[0].append(e.course_id.course_code)
-        course_and_mark[1].append(e.course_mark)
-
+        course_and_mark[0].append(str(e.course_id.course_code))
+        course_and_mark[1].append(int(e.course_mark))
+    #enrol=[['COMS1018A', 'COMS2002A'],[80,100]]
+     
     if(request.method == 'POST'):
-        course_recommender.recommend_course(enrol,highest_level)
-        predicted = course_recommender.predict()
+        predicted = avi_app.course_recommender.predict(course_and_mark)
         student_id = Student.objects.get(student_id=request.session.get('id'))
 
         for i in range(len(predicted[0])):
-            course_id = Course.objects.get(course_code=predicted[0][i])
-            course_mark = predicted[1][i]
-            Predicted.objects.create(student_id = student_id, 
-                            course_id = course_id,
-                            course_mark =  course_mark,)
+            if(len(predicted[0][i]) != 0):
+                course_code = Course.objects.get(course_code=predicted[0][i])
+                predicted_mark = predicted[1][i]
+                Predicted.objects.create(student_id = student_id, 
+                                course_code = course_code,
+                                predicted_mark =  predicted_mark,)
 
         return redirect('recommendations')
         
     context = {
         'nums': [1,2,3,4,5,6,7,8,9,10],
+        'predicted': avi_app.course_recommender.predict(course_and_mark),
         'predict': Predicted.objects.filter(student_id=request.session.get('id')),
     }
     return render(request,'avi_app/recommendations.html',context)

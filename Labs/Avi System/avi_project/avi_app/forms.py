@@ -28,6 +28,6 @@ class LoginForm(forms.Form):
 
 class AddCourseForm(forms.Form):
     #student_id  = forms.IntegerField(widget = forms.NumberInput(attrs={'placeholder': 'Student Number'}))
-    course_id = forms.CharField(max_length=8, widget = forms.TextInput(attrs={'placeholder': 'Course Code'}))
+    course_id = forms.CharField(max_length=10, widget = forms.TextInput(attrs={'placeholder': 'Course Code'}))
     course_mark = forms.DecimalField(decimal_places = 2, max_digits = 4, widget = forms.NumberInput(attrs={'placeholder': 'percentage(%)'}))
     
