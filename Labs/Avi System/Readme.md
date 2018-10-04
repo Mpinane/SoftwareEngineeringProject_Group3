@@ -4,7 +4,7 @@ Avi means grandfather in Catalan.
 
 
 ### Prerequisites:
-The program requires python3 and Django to be installed.
+The System requires python3 and Django-Framework to be compiled successfully.
 
 
 ### Installing:
