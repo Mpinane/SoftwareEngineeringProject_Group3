@@ -58,7 +58,6 @@ def predict(enrol):
     predicted_courses=[]
 
     for i in range(len(honours_codes)):
-        
         returned=recommend_course(enrol,honours_codes[i])
         if returned=='A' or returned=='B' or returned=='C':
             predicted_courses.append(honours_codes[i])

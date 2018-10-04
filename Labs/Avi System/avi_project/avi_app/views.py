@@ -16,8 +16,7 @@ from django.http import HttpResponseRedirect
 from .forms import CreateAccountForm
 from .forms import LoginForm
 from .forms import AddCourseForm
-
-from .models import Student
+from .forms import AccountSettingsForm
 
 
 def create_account(request):
@@ -113,7 +112,6 @@ def edit_courses(request):
 
 def recommendations(request):
     enrol =  Enrolment.objects.filter(student_id=request.session.get('id'))
-    highest_level = Student.objects.get(student_id=request.session.get('id')).student_current_level
     course_and_mark=[]
     course_and_mark.append([])
     course_and_mark.append([])
@@ -131,9 +129,16 @@ def recommendations(request):
             if(len(predicted[0][i]) != 0):
                 course_code = Course.objects.get(course_code=predicted[0][i])
                 predicted_mark = predicted[1][i]
-                Predicted.objects.create(student_id = student_id, 
-                                course_code = course_code,
-                                predicted_mark =  predicted_mark,)
+
+                try:
+                    rec = Predicted.objects.get(student_id=student_id, course_code = course_code )
+                    rec.predicted_mark = predicted_mark
+                    rec.save()
+                except Predicted.DoesNotExist:
+                    Predicted.objects.create(student_id = student_id, 
+                                        course_code = course_code,
+                                        predicted_mark =  predicted_mark,)
+
 
         return redirect('recommendations')
         
@@ -145,11 +150,29 @@ def recommendations(request):
     return render(request,'avi_app/recommendations.html',context)
 
 def account_settings(request):
+    form = AccountSettingsForm(request.POST)
+    student = Student.objects.get(student_id=request.session.get('id'))
     context = {
-        'first': "Mpinane",
-        'surname': "Mohale",
-        'student_number': "1363679"
+        'student': student,
+        'form': form,
     }
+
+
+    if(request.method == 'POST'):
+        
+        if(form.is_valid()):
+            student_password = request.POST.get("new_password")
+            student_current_level = request.POST.get("student_current_level")
+            if(request.POST.get("old_password") == student.student_password and request.POST.get("new_password") == request.POST.get("confirm_password")):
+                student.student_password = student_password
+            if(student_current_level != '-1'):
+                student.student_current_level = student_current_level
+
+            student.save()                                   
+            return redirect('account_settings')
+    else:
+            form = AccountSettingsForm()
+
     return render(request,'avi_app/account_settings.html',context)
 
 def delete(request,id):
