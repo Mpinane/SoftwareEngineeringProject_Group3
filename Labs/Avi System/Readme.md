@@ -56,6 +56,15 @@ run 'django-admin --version' to check if installation was successful.
 
 
 ### Running the tests: Unit Tests
+#### Requires Pytest to be installed.
+##### Windows:
+                  ~$: pip install pytest
+              
+          
+##### Linux and MacOS:
+                  ~$: sudo pip install pytest
+                        
+
   // Instructions To be completed
 
 
