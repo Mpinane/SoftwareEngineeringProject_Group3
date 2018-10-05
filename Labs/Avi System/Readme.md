@@ -13,14 +13,31 @@ The System requires python3 and Django-Framework to be compiled successfully.
 ##### Windows: https://www.python.org/downloads/windows/
 run 'python3 --version' to check if installation was successful.
 
+##### Extra required libraries:
+             ~$: pip install pandas
+             ~$: pip install numpy
+             ~$: pip install sklearn
+
 ##### Linux: 
              ~$: sudo apt-get update
              ~$: sudo apt-get dist-upgrade 
              ~$: sudo apt-get install python3.6
 run 'python3 --version' to check if installation was successful.
+    
+     
+##### Extra required libraries:
+             ~$: sudo pip install pandas
+             ~$: sudo pip install numpy
+             ~$: sudo pip install sklearn
 
 ##### Mac OS: https://www.python.org/downloads/mac-osx/
 run 'python3 --version' to check if installation was successful.
+
+    
+##### Extra required libraries:
+             ~$: sudo pip install pandas
+             ~$: sudo pip install numpy
+             ~$: sudo pip install sklearn
 
 #### 2. Django:
 ##### Windows: 
