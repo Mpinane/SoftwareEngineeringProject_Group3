@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 from sklearn import tree
 
-enrol=[['COMS1018A', 'COMS2002A'],[80,100]]
+#enrol=[['COMS1018A', 'COMS2002A'],[80,100]]
 def recommend_course(enrol,code):
     X=pd.read_csv('avi_app/preprocessed_data/training_features_'+code+'.csv').values
     Y=pd.read_csv('avi_app/preprocessed_data/training_class_'+code+'.csv').values[0]

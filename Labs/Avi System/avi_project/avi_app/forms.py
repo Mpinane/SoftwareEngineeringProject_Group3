@@ -1,5 +1,4 @@
 from django import forms
-from avi_app.models import Course
 
 LEVEL_OF_STUDY =  [
     ('-1', 'Current Level of Study'),
