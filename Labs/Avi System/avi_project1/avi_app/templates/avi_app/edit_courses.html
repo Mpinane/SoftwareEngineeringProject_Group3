@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en-us" >
+<head>
+<title>Edit Courses | Avi</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+<link rel="stylesheet" href="{% static 'avi_app/CSS/style.css' %}"/>
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+</head>
+
+
+<body>
+
+    <header>
+        <div>
+            <img src="{% static '/avi_app/images/avi.jpg'%}">
+        </div>
+
+        <div>
+            <ul>
+                <a href="/home" ><li>Home</li></a>
+                <a href="/courses" class="active"  ><li>Courses</li></a>
+                <a href="/recommendations" ><li>Recommendations</li></a>
+                <a href="/acccount_settings" > <li>Account Settings</li></a>
+                <a href="/login"><li>Logout</li></a>
+            </ul>
+        </div>
+    </header>
+
+    <div id="edit_courses">
+        <h3>Edit Courses</h3>
+        <!--
+            <form method='POST' action='' enctype='multipart/form-data'>{% csrf_token %}
+                {{form.as_p}} 
+             
+                <form action="{% url 'avi_app:delete_courses' %}">
+                {% for enrolment in object_list %}
+
+                    <table>{{enrolment.course_code}} - {{enrolment.course_mark}}</table>
+                    <p>{{enrolment.course_code}} -{{enrolment.course_mark}} </p>
+                   
+                {% endfor %} -->
+
+           <form action="{% url 'avi_app:edit_courses' %}" > 
+               {% for enrolment in object_list %}
+                    <input type="text" name="c" value="{{enrolment.course_code}}"/>
+                    <input type="number" name="grades" value="{{enrolment.course_mark}}"/>
+                    <input type="button" id="delete_course" name="{{enrolment.course_code}}" value="Delete"/> 
+                    <br/>
+                    <br/>
+                {% endfor %} X
+                
+                <input type="submit" value="Make Changes"/>
+            </form>
+
+
+    </div>
+
+</body>
+</html>

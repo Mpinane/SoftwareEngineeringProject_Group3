@@ -4,11 +4,11 @@ from sklearn import tree
 
 enrol=[['COMS1018A', 'COMS2002A'],[80,100]]
 def recommend_course(enrol,code):
-    X=pd.read_csv('preprocessed_data/training_features_'+code+'.csv').values
-    Y=pd.read_csv('preprocessed_data/training_class_'+code+'.csv').values[0]
+    X=pd.read_csv('avi_app/preprocessed_data/training_features_'+code+'.csv').values
+    Y=pd.read_csv('avi_app/preprocessed_data/training_class_'+code+'.csv').values[0]
     courses=enrol[0]
     marks=enrol[1]
-    df=pd.read_csv('preprocessed_data/courses_undergraduate.csv')
+    df=pd.read_csv('avi_app/preprocessed_data/courses_undergraduate.csv')
     all_courses=df['COURSE_CODE']
     all_courses=np.array(all_courses)
     symbols=[-1]*len(all_courses)
@@ -48,19 +48,19 @@ def recommend_course(enrol,code):
     elif predicted_output[0]==4:
         return 'F'
 
-df_honour=pd.read_csv('preprocessed_data/HONOURS.csv')
-honours_codes=df_honour['COURSE_CODE']
-honours_codes=np.array(honours_codes)
-predicted_symbols=[]
-predicted_courses=[]
 
-def predict():
+
+def predict(enrol):
+    df_honour=pd.read_csv('avi_app/preprocessed_data/HONOURS.csv')
+    honours_codes=df_honour['COURSE_CODE']
+    honours_codes=np.array(honours_codes)
+    predicted_symbols=[]
+    predicted_courses=[]
+
     for i in range(len(honours_codes)):
-        
         returned=recommend_course(enrol,honours_codes[i])
         if returned=='A' or returned=='B' or returned=='C':
             predicted_courses.append(honours_codes[i])
             predicted_symbols.append(returned)
     return [predicted_courses,predicted_symbols]
         
-print(predict())

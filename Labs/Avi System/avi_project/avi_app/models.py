@@ -8,7 +8,7 @@ class Student(models.Model):
     student_current_level = models.CharField(max_length=20)
 
 class Course(models.Model):
-    course_code = models.CharField(max_length=8, primary_key = True)
+    course_code = models.CharField(max_length=10, primary_key = True)
     course_description = models.CharField(max_length=100)
 
 class Enrolment(models.Model):
@@ -19,5 +19,5 @@ class Enrolment(models.Model):
 class Predicted(models.Model):
     student_id  = models.ForeignKey(Student, on_delete = models.CASCADE)
     course_code = models.ForeignKey(Course, on_delete = models.CASCADE)
-    predicted_mark = models.DecimalField(decimal_places = 2, max_digits = 4)
+    predicted_mark = models.CharField(max_length=1)
 

@@ -21,7 +21,7 @@
                 <a href="/home" ><li>Home</li></a>
                 <a href="/courses"  ><li>Courses</li></a>
                 <a href="/recommendations" ><li>Recommendations</li></a>
-                <a href="/acccount_settings" class="active"> <li>Account Settings</li></a>
+                <a href="/account_settings" class="active"> <li>Account Settings</li></a>
                 <a href="/login"><li>Logout</li></a>
             </ul>
         </div>
@@ -41,38 +41,38 @@
             Completed Year of Study:
             <br/>
             <br/>
+            Change Completed Year of Study:
+            <br/>
+            <br/>
             Change Password:
 
         </div>
 
         <div class="settings">
-            <form>
-                    {{ first }}
+                <form action="" method="post"><input type="hidden" name="csrfmiddlewaretoken">
+                    {% csrf_token %}
+                    {{ student.student_name }}
                     <br/>
                     <br/>
-                    {{ surname }}
+                    {{ student.student_surname }}
                     <br/>
                     <br/>
-                    {{ student_number }}
+                    {{ student.student_id }}
                     <br/>
                     <br/>
-                    <select>
-                        <option value="-1">Completed Level of Study</option>
-                        <option value="YOS1">YOS1</option>
-                        <option value="YOS1">YOS2</option>
-                        <option value="YOS1">YOS3</option>
-                        <option value="Honours">Honours</option>
-                        <option value="Masters">Masters</option>
-                    </select>
+                    {{student.student_current_level}}
+                    <br/>
+                    <br/> 
+                    {{form.student_current_level}}
                     <br/>
                     <br/>
-                   <input type="password" id="old_password" placeholder="Old Password" />
+                   {{ form.old_password }}
                    <br/>
                    <br/>
-                   <input type="password" id="new_password" placeholder="New Password" />
+                   {{ form.new_password }}
                    <br/>
                    <br/>
-                   <input type="password" id="confirm_password" placeholder="Confirm Password" />
+                   {{ form.confirm_password }}
                    <br/>
                    <br/>
 

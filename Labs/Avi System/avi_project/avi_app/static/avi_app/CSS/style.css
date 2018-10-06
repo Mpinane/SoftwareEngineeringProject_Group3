@@ -85,11 +85,21 @@ header a {
     border: 1px solid black;
     width: 900px;
 }
+
+#recommendations input[type=submit] {
+    margin-top:20px;
+    float: right;
+    margin-bottom:20px;
+}
+
 .courses table, tr {
     border: 1px solid black;
     width: 400px;
 }
 
+#recommendations table {
+    width: 800px;
+}
 
 #add_more{
     float:left;

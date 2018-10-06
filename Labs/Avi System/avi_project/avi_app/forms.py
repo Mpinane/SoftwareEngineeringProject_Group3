@@ -28,6 +28,15 @@ class LoginForm(forms.Form):
 
 class AddCourseForm(forms.Form):
     #student_id  = forms.IntegerField(widget = forms.NumberInput(attrs={'placeholder': 'Student Number'}))
-    course_id = forms.CharField(max_length=8, widget = forms.TextInput(attrs={'placeholder': 'Course Code'}))
+    course_id = forms.CharField(max_length=10, widget = forms.TextInput(attrs={'placeholder': 'Course Code'}))
     course_mark = forms.DecimalField(decimal_places = 2, max_digits = 4, widget = forms.NumberInput(attrs={'placeholder': 'percentage(%)'}))
     
+class AccountSettingsForm(forms.Form):
+    student_current_level = forms.CharField(max_length=20, required=False,
+                            widget=forms.Select(choices = LEVEL_OF_STUDY))
+    old_password = forms.CharField(max_length=20,required=False,
+                        widget = forms.PasswordInput(attrs={'placeholder': 'Old Password'}))
+    new_password = forms.CharField(max_length=20, required=False,
+                        widget = forms.PasswordInput(attrs={'placeholder': 'New Password'}))
+    confirm_password = forms.CharField(max_length=20,required=False,
+                        widget = forms.PasswordInput(attrs={'placeholder': 'Confirm Password'}))
