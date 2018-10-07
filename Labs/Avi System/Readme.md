@@ -112,10 +112,10 @@ run 'django-admin --version' to check if installation was successful.
 
 ### Authors: 
 
-              Mohale Mpinane - 1363679 
-              Shipyana Thulisile - 916781
-              Mahlangu Lucky - 1395125
-              Mkhombe Sbusiso - 1154046
+              Mohale Mpinane - 1363679@students.wits.ac.za 
+              Shipyana Thulisile - 916781@students.wits.ac.za
+              Mahlangu Lucky - 1395125@students.wits.ac.za
+              Mkhombe Sbusiso - 1154046@students.wits.ac.za
 
 
 ### Acknowledgments:
