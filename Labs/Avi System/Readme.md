@@ -73,6 +73,11 @@ run 'django-admin --version' to check if installation was successful.
              iv. After successful compilation, open your browswer and type in 'localhost:8000' in the browser url bar.
               v. Register and Relish.   
 
+#### Admin Privilege:
+             i. localhost:8000/admin
+            ii. log in using the credentials - username: admin password: pass1234 
+           iii. Access and/or Alter Users, Database Tables and check user logs.
+
 
 ### Running the tests: Unit Tests
 
@@ -80,7 +85,6 @@ run 'django-admin --version' to check if installation was successful.
 #### Django Tests:
               Run '~$: python manage.py test' in the terminal in the folder containing the manage.py file.
 ###### This will return the number of test cases evaluated and display the number of those passed and those failed.
-
 
 
 #### PyTest Tests:
@@ -118,3 +122,4 @@ run 'django-admin --version' to check if installation was successful.
 
 
 http://softwaretestingfundamentals.com/unit-testing/ - Testing Documentation Reference
+
