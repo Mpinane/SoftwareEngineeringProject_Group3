@@ -64,35 +64,57 @@ run 'django-admin --version' to check if installation was successful.
              ii. Existing users can login and add academic infomation.
             iii. Existing Users can edit user infomation and course detail.
              iv. Machine Learning is used extensively in course and grade Predictions. These machine learning algorithms were fed training, validation and testing data of past post graduate students.
-              v. ??
 
 
-### How to use?
-  //To be completed
-
+### How to use:
+              i. Run and install all required libraries.
+             ii. Download and Extract.
+            iii. Run '~$: python manage.py runserver' in the terminal in the folder containing the manage.py file.
+             iv. After successful compilation, open your browswer and type in 'localhost:8000' in the browser url bar.
+              v. Register and Relish.   
 
 
 ### Running the tests: Unit Tests
+
+
+#### Django Tests:
+              Run '~$: python manage.py test' in the terminal in the folder containing the manage.py file.
+###### This will return the number of test cases evaluated and display the number of those passed and those failed.
+
+
+
+#### PyTest Tests:
+
+
 #### Requires Pytest to be installed.
 ##### Windows:
-                  ~$: pip install pytest
-                  ~$: pip install pytest-django
-                  ~$: pip instsall pytest-cov
-                  ~$: pip install mixer
-          
-##### Linux and MacOS:
-                  ~$: sudo pip install pytest
-                  ~$: sudo pip install pytest-django
-                  ~$: sudo pip instsall pytest-cov
-                  ~$: sudo pip install mixer
+              ~$: pip install pytest
+              ~$: pip install pytest-django
+              ~$: pip instsall pytest-cov
+              ~$: pip install mixer
 
-  // Instructions To be completed
+##### Linux and MacOS:
+              ~$: sudo pip install pytest
+              ~$: sudo pip install pytest-django
+              ~$: sudo pip instsall pytest-cov
+              ~$: sudo pip install mixer
+
+##### Running Pytests: 
+
+               i. Ensure successul installation of the above.
+              ii. From the Avi_project directory run '~$: py.test' in your terminal
+###### This will return the number of test cases and display the number of those passed and those failed.
 
 
 ### Authors: 
-  //To be completed
+
+              Mohale Mpinane - 1363679 
+              Shipyana Thulisile - 916781
+              Mahlangu Lucky - 1395125
+              Mkhombe Sbusiso - 1154046
+
 
 ### Acknowledgments:
-  //To be completed
-  
+
+
 http://softwaretestingfundamentals.com/unit-testing/ - Testing Documentation Reference
