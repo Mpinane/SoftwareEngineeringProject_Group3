@@ -81,18 +81,20 @@ def courses(request):
 
     if(request.method == 'POST'):
         
-        # if(form.is_valid()):
-        courses= request.POST.get("course_id")
-        student_id = Student.objects.get(student_id=request.session.get('id'))
-        course_id = Course.objects.get(course_code=request.POST.get("course_id"))
-        course_mark = request.POST.get("course_mark")
-        Enrolment.objects.create(student_id = student_id, 
-                            course_id = course_id,
-                            course_mark =  course_mark,)
-        return redirect('courses')
+        try:
+            courses= request.POST.get("course_id")
+            student_id = Student.objects.get(student_id=request.session.get('id'))
+            course_id = Course.objects.get(course_code=request.POST.get("course_id"))
+            course_mark = request.POST.get("course_mark")
+            Enrolment.objects.create(student_id = student_id, 
+                                course_id = course_id,
+                                course_mark =  course_mark,)
+            return redirect('courses')
+        except Course.DoesNotExist:
+            return redirect('courses')
     else:
-            form = CreateAccountForm()
-
+        form = CreateAccountForm()
+    
     return render(request,'avi_app/courses.html',context)
 
 def edit_courses(request):
