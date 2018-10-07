@@ -2,6 +2,7 @@ from django.urls import reverse, resolve
 from mixer.backend.django import mixer
 import pytest
 
+#use 'py.test' to run test cases
 
 class TestUrls:  # Tests URLS
     # Tests home url successful redirect
