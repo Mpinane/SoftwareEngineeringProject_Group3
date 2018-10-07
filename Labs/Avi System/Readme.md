@@ -86,7 +86,7 @@ run 'django-admin --version' to check if installation was successful.
 #### PyTest Tests:
 
 
-#### Requires Pytest to be installed.
+##### Requires Pytest to be installed.
 ##### Windows:
               ~$: pip install pytest
               ~$: pip install pytest-django
