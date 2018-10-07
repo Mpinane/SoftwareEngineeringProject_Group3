@@ -1,5 +1,7 @@
 from avi_app.models import Student, Course, Enrolment, Predicted
 
+from django.db import IntegrityError
+
 from django.shortcuts import render
 
 from django.shortcuts import redirect
@@ -27,18 +29,21 @@ def create_account(request):
 
     if(request.method == 'POST'):
         
-        if(form.is_valid()):
-            student_id = request.POST.get("student_id")
-            student_name = request.POST.get("student_name")
-            student_surname = request.POST.get("student_surname")
-            student_password = request.POST.get("student_password")
-            student_current_level = request.POST.get("student_current_level")
-            Student.objects.create(student_id = student_id, 
-                                student_name = student_name,
-                                student_surname =  student_surname,
-                                student_password = student_password,
-                                student_current_level = student_current_level)
-            return redirect('login')
+        try:
+            if(form.is_valid() and request.POST.get("student_password") == request.POST.get("confirm_password")):
+                student_id = request.POST.get("student_id")
+                student_name = request.POST.get("student_name")
+                student_surname = request.POST.get("student_surname")
+                student_password = request.POST.get("student_password")
+                student_current_level = request.POST.get("student_current_level")
+                Student.objects.create(student_id = student_id, 
+                                    student_name = student_name,
+                                    student_surname =  student_surname,
+                                    student_password = student_password,
+                                    student_current_level = student_current_level)
+                return redirect('login')
+        except IntegrityError:
+            return redirect('create_account')
     else:
             form = CreateAccountForm()
     
@@ -165,12 +170,17 @@ def account_settings(request):
         if(form.is_valid()):
             student_password = request.POST.get("new_password")
             student_current_level = request.POST.get("student_current_level")
-            if(request.POST.get("old_password") == student.student_password and request.POST.get("new_password") == request.POST.get("confirm_password")):
-                student.student_password = student_password
+            
             if(student_current_level != '-1'):
                 student.student_current_level = student_current_level
+                student.save()
 
-            student.save()                                   
+            if(request.POST.get("old_password") == student.student_password and request.POST.get("new_password") == request.POST.get("confirm_password")):
+                student.student_password = student_password
+                student.save()
+                return redirect('login')
+
+                                               
             return redirect('account_settings')
     else:
             form = AccountSettingsForm()
