@@ -1,0 +1,116 @@
+.courses, .settings{
+    display:inline-table;
+}
+
+img {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height:80px;
+}
+
+#login, #create_account {
+    margin: auto;
+    width:600px;
+    margin-top:150px;
+    border: 2px solid black;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+form input,select,button {
+    border-radius: 4px;
+    border: 1px solid grey;
+}
+
+input[type=number], select {
+    width: 210px;
+}
+
+input[type=submit], input[type=button], button{
+    background: lightgrey;
+    border: 2px solid grey; 
+}
+
+input[type=submit]:hover, input[type=button]:hover, button:hover{
+    cursor:pointer;
+    background:white;
+    border: 2px solid black;
+}
+
+#home, header, #courses, #recommendations, #account_settings, #edit_courses {
+    margin: auto;
+    width:600px;
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+header ul {
+    list-style: none;
+    text-decoration: none;
+    
+    
+}
+
+li {
+    display: inline-block;
+    padding: 10px;
+}
+
+header a {
+    color: black;
+    
+}
+
+.active {
+    color: rgb(4, 137, 219);
+}
+
+#home button{
+    width: 350px;
+    height:150px;
+    
+}
+
+#home a {
+    display: inline-table;
+    padding:10px;
+}
+
+#courses {
+    border: 1px solid black;
+    width: 900px;
+}
+
+#recommendations {
+    border: 1px solid black;
+    width: 900px;
+}
+
+#recommendations input[type=submit] {
+    margin-top:20px;
+    float: right;
+    margin-bottom:20px;
+}
+
+.courses table, tr {
+    border: 1px solid black;
+    width: 400px;
+}
+
+#recommendations table {
+    width: 800px;
+}
+
+#add_more{
+    float:left;
+}
+
+#add_courses {
+    text-align: left;
+}
+
+#second {
+    width: 400px;
+}
+
+
